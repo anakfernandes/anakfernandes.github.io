@@ -7,6 +7,9 @@
     font-family: "Titillium Web", sans-serif;
 }
 
+body {
+    background-color: #F5F5F5;
+}
 
 main {
     display: flex;
@@ -24,45 +27,38 @@ main {
 .sobre-grupo h3 {
     font-size: 2em;
     margin-bottom: 20px;
-
 }
 
 .sobre-grupo p {
     font-size: 1.3em;
     line-height: 1;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     text-align: justify;
 }
-
 
 .container {
     max-width: 1080px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
 header {
-    background-color: black;
+    background-color: rgb(184, 70, 70);
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .nome {
-    text-align: center;
     font-size: 40px;
+    color: #333;
 }
 
 .subnome {
-    text-align: center;
     font-size: 20px;
-}
-
-.logo,
-.sociais{
-    width: 25%;
-    margin: 0 auto;
+    color: #777;
 }
 
 .logo {
@@ -72,57 +68,51 @@ header {
 }
 
 .logo img {
-    width: 200px;
-    cursor: pointer;
-}
-
-footer img {
-    width: 40px;
-    height: 40px;
-}
-
-footer {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-footer a {
-    margin: 20px;
-    text-align: center;
-    align-items: center;
-}
-
-footer p {
-    margin-top: 2px;
-    align-items: center;
+    width: 120px;
 }
 
 .menu {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
-.menu nav a {
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin-right: 30px;
+}
+
+.menu ul li a {
     color: white;
     text-decoration: none;
-    padding-right: 50px;
     font-size: 18px;
     position: relative;
+    padding-bottom: 5px;
 }
 
-.menu nav a::after {
-    content: " ";
-    width: 30px;
-    height: 4px;
-    background-image: linear-gradient(45deg, rgb(248, 78, 106), rgb(215, 144, 156));
-    position: absolute;
-    top: 30px;
-    left: 0;
+.menu ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, rgb(248, 78, 106), rgb(215, 144, 156));
     transition: width 0.5s;
+    margin-top: 5px;
 }
 
-.menu nav a:hover::after {
-    width: 30px;
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+.sociais {
+    display: flex;
+    align-items: center;
 }
 
 .sociais button {
@@ -132,7 +122,7 @@ footer p {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .sociais button i {
@@ -140,12 +130,45 @@ footer p {
     color: white;
 }
 
+.center {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(184, 70, 70);
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+}
+
+footer a .contact {
+    width: 40px;
+    height: 40px;
+}
+
+footer p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
 .meninas {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #e9ace6;
-    padding: 20px 0; 
+    background-color: rgb(184, 70, 70);
+    padding: 20px 0;
     height: 100px;
 }
 
@@ -154,15 +177,15 @@ footer p {
 }
 
 .integrante img {
-    width: 100%; 
-    height: 90px; 
+    width: 100%;
+    height: 90px;
     border-radius: 50%;
     transition: transform 0.3s ease;
     margin: 0 10px;
 }
 
 .integrante .info {
-    position: absolute; 
+    position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
